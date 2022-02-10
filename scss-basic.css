@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 #menu {
   width: inherit;
 }
@@ -17,7 +21,15 @@
 #menu ul li {
   flex: 1;
   list-style: none;
+}
+#menu ul li a {
+  display: block;
+  height: 5vh;
   text-align: center;
+  line-height: 5vh;
+  color: #ccc;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 #container {
@@ -30,5 +42,5 @@
   border: 1px solid #ccc;
 }
 #container section h1 {
-  color: blue;
+  color: #ccc;
 }/*# sourceMappingURL=scss-basic.css.map */

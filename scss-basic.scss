@@ -3,23 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 $bg-color-333:#333;
+$font-color-ccc:#ccc;
 @mixin testLine($color:#ccc) {
   border: 1px solid $color;
+}
+
+@mixin flex($center : center) { 
+  display: flex;
+  justify-content: space-between;
+  align-items: $center;
 }
 #menu {
   width: inherit;
   ul {
     width: 80vw;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex;
 
     li {
       flex: 1;
       list-style: none;
-      text-align: center;
+      
+      a {
+        display: block;
+        height: 5vh;
+        text-align: center;
+        line-height: 5vh;
+        color: $font-color-ccc;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
     }
   }
 }
@@ -32,7 +49,7 @@ $bg-color-333:#333;
     height: 100vh;
     @include testLine;
     h1 {
-      color: blue;
+      color: $font-color-ccc;
     }
   }
 }
